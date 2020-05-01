@@ -9,15 +9,19 @@ const blueButton = document.querySelector("#blue-button");
 blueButton.addEventListener("click", function () {
     colorBox.className = "blue";
 })
-/* TODO 1
-*
-* Add the JS for the pink button
-*
-*/
+//JS for the pink button
+const pinkButton = document.querySelector("#pink-button");
+pinkButton.addEventListener("click", function () {
+    colorBox.className = "pink";
+})
 let count = 0;
 const countspan = document.querySelector("#countspan");
 const counterButton = document.querySelector("#counter-button");
 counterButton.addEventListener("click", function () {
+    console.log("+ button clicked");
+    countspan.innerHTML = count += 1
+    
+
     /* TODO 2
     *
     * Fill in this function so that it increments
@@ -28,6 +32,11 @@ counterButton.addEventListener("click", function () {
 })
 const evenOrOddButton = document.querySelector("#even-or-odd-button");
 evenOrOddButton.addEventListener("click", function () {
+    if (count % 2 === 0) {
+     window.alert('Even');
+    } else { 
+        window.alert('Odd');
+    }
     /* TODO 3
     *
     * Fill in this function so that it shows an
